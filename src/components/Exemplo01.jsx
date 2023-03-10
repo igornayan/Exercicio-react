@@ -1,23 +1,33 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 
+
 class Timer extends React.Component 
 {
     constructor(props)
     {
         super(props)
-        this.state = {seconds: 0}
-        seconds: this.props.start
+        this.state = {
+            seconds: 0,
+            running: true
+        }
     }
 
     contar()
     {
-        this.setState(state => ({seconds: state.seconds + 1}))
+        if(this.state.running)
+        this.setState(state => ({
+            seconds: state.seconds + 1,
+            running: true
+        }))
     }
     
-    render()
+    startStop()
     {
-        return <h1>Timer</h1>
+        this.setState(state => ({
+            seconds: state.seconds + 1,
+            running: true
+        }))
     }
 
     componentDidMount() 
@@ -33,9 +43,16 @@ class Timer extends React.Component
     render() 
     {
         return (
-          <div>
-            <h1> Segundos: {this.state.seconds} </h1>
-          </div>
+        <>
+        <div className="bg-black w-96 h-16 m-4 border-4 border-yellow-500 rounded-2xl flex flex-col justify-center items-center ">
+            <h1 className="text-yellow-400 text-4xl cronometro">
+            Segundos: {this.state.seconds} </h1>
+        </div>
+        <div className="bg-yellow-500 w-96 m-4 space-x-14">
+            <button onClick={this.startStop} className="ml-5 p-1.5 border-2 border-black"> Iniciar/Pausar </button>
+            <button className=""> Zerar </button>
+        </div>
+        </>
         );
     }
 }

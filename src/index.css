@@ -1,0 +1,12 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+    font-family: 'relogio-digital';
+    src: url('/public/fontes/digital-7.ttf');
+}
+
+.cronometro{
+    font-family: relogio-digital;
+}
