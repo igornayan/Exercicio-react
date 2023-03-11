@@ -1,11 +1,16 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import Timer from "./components/Exemplo01";
-import "./index.css"
+import { createBrowserRouter, RouterProvider } from 'react-router-dom'
+import routes from './routes'
+import './index.css'
+
+const router = createBrowserRouter(routes)
 
 const root = ReactDOM.createRoot(document.getElementById("root"))
 root.render(
 <div>   
-    <Timer start = {0}></Timer>
+    <React.StrictMode>
+    <RouterProvider router={router} />
+    </React.StrictMode>
 </div>
 )

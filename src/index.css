@@ -6,7 +6,15 @@
     font-family: 'relogio-digital';
     src: url('/public/fontes/digital-7.ttf');
 }
+@font-face {
+    font-family: 'Fonte-normal';
+    src: url('/public/fontes/Ambra-Sans-Book-trial.ttf');
+}
 
 .cronometro{
     font-family: relogio-digital;
+}
+
+.fonte{
+    font-family: Fonte-normal;
 }
