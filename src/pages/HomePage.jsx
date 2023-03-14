@@ -1,6 +1,6 @@
 import React from "react"
 import { Link } from "react-router-dom"
-import Timer from "../components/Exemplo01"
+import Timer from "../components/Timer"
 
 function HomePage() 
 {

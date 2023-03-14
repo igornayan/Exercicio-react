@@ -48,12 +48,12 @@ class Timer extends React.Component
             <h1 className="text-yellow-400 text-4xl cronometro">
             Segundos: {this.state.seconds} </h1>
         </div>
-        <div className="bg-yellow-500 w-96 m-4 space-x-14">
-            <button onClick={this.startStop} className="ml-5 p-1.5 border-2 border-black"> Iniciar/Pausar </button>
-            <button className=""> Zerar </button>
+        <div className="w-96 ml-10 m-4 space-x-14">
+            <button onClick={this.startStop} className="ml-5 p-1.5 border-2 bg-yellow-500"> Iniciar/Pausar </button>
+            <button className="bg-yellow-500 w-28 ml-5 p-1.5 border-2"> Zerar </button>
         </div>
         </>
-        );
+        )
     }
 }
 
