@@ -1,14 +1,14 @@
 import React from "react"
 import Navbar from "../components/NavBar"
-import formulario01 from "../components/Formulário1"
+import FormSteps from "../components/FormulárioSteps"
 
 function Formulario()
 {
     return(
         <>
         <Navbar />
-        <div className="flex justify-center items-center">
-        <formulario01 />
+        <div>
+            <FormSteps />
         </div>
         </>
     )

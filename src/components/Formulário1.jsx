@@ -1,23 +1,21 @@
-import React from "react"
+import React from 'react';
 
-function formulario01(props)
-{
-    const {mudar, estudante, atualizarEstudante} = props
+function Form01(props) {
+  const { change, student, updateStudent } = props;
 
-    function onSubmit(e) 
-    {
-        e.preventDefault();
-        console.log(estudante);
-        mudar(2);
-    }
+  function onSubmit(e) {
+    e.preventDefault();
+    console.log(student);
+    change(2);
+  }
 
-    return(
-        <div className="border-2 bg-branco border-gray-300 rounded-lg h-full w-full sm:h-auto sm:w-80 md:w-96  p-8">
+  return (
+    <div className="border-2 border-gray-300 rounded-lg h-full w-full sm:h-auto sm:w-80 md:w-96  p-8">
       <div>
         <img
           className="mx-auto h-auto w-auto"
-          src="/img/mouratech.png"
-          alt="OK"
+          src="/Moura logo 2.png"
+          alt="Moura Logo"
         />
         <h2 className="mt-6 text-center text-3xl font-bold tracking-tight text-preto">
           Informe sua matrícula
@@ -27,11 +25,10 @@ function formulario01(props)
         <div className="-space-y-px rounded-md shadow-sm">
           <div>
             <input
-              value={estudante.enrollment}
-              onmudar={(e) => 
-              {
-                const newStudent = { ...estudante, enrollment: e.target.value };
-                atualizarEstudante(newStudent);
+              value={student.enrollment}
+              onChange={(e) => {
+                const newStudent = { ...student, enrollment: e.target.value };
+                updateStudent(newStudent);
               }}
               id="enrollment"
               name="enrollment"
@@ -47,7 +44,7 @@ function formulario01(props)
         <div className="flex justify-end">
           <button
             type="submit"
-            className="group relative flex w-24 justify-center rounded-md bg-azul py-2 px-3 text-sm font-semibold text-white hover:bg-azul/80 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-azul cursor-pointer"
+            className="group relative flex w-24 justify-center rounded-md bg-azul py-2 px-3 text-sm font-semibold text-white bg-blue-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-azul cursor-pointer"
           >
             Próximo
           </button>
@@ -57,4 +54,4 @@ function formulario01(props)
   );
 }
 
-export default formulario01 
+export default Form01;
