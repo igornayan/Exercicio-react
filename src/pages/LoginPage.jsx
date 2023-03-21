@@ -19,7 +19,7 @@ function LoginPage()
                     <input className="h-12 w-full mb-1.5 rounded-md  p-2.5" type="text" placeholder="Email"></input>
                     <input className="h-12 w-full rounded-md p-2.5" type="password" placeholder="Senha"></input>
                     <button className="w-full h-11 mt-14 bg-blue-700 rounded-md text-white">Entrar</button>
-                    <p className="absolute right-0 bottom-16 text-blue-700">Esqueceu a senha ?</p>
+                    <p className="absolute right-0 bottom-16 text-blue-700 cursor-pointer">Esqueceu a senha ?</p>
                 </div>
             </div>
         </div>
